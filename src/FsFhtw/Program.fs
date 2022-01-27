@@ -10,7 +10,5 @@ let main argv =
 
     let playerName = Console.ReadLine()
     let initialState = Domain.init playerName
-    Repl.evaluate Domain.update initialState (Repl.Message.DomainMessage Domain.Info)
-    |> Repl.print
     Repl.loop initialState
     0 // return an integer exit code
